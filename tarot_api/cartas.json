@@ -1,0 +1,419 @@
+[
+    {
+        "id": 0,
+        "nombre": "El Loco",
+        "nombre_ingles": "The Fool",
+        "numero_romano": "0",
+        "descripcion": "Nuevos comienzos, espontaneidad, libertad.",
+        "significado_upright": [
+            "Inocencia",
+            "Aventura",
+            "Espontaneidad"
+        ],
+        "significado_reversed": [
+            "Imprudencia",
+            "Inmadurez",
+            "Caos"
+        ],
+        "elemento": "Aire",
+        "planeta": "Urano",
+        "imagen_url": "/uploads/el_loco_5770.jpg"
+    },
+    {
+        "id": 1,
+        "nombre": "El Mago",
+        "nombre_ingles": "The Magician",
+        "numero_romano": "I",
+        "descripcion": "Poder personal, manifestación, habilidad.",
+        "significado_upright": [
+            "Habilidad",
+            "Concentración",
+            "Confianza"
+        ],
+        "significado_reversed": [
+            "Manipulación",
+            "Deshonestidad",
+            "Confusión"
+        ],
+        "elemento": "Aire",
+        "planeta": "Mercurio",
+        "imagen_url": ""
+    },
+    {
+        "id": 2,
+        "nombre": "La Sacerdotisa",
+        "nombre_ingles": "The High Priestess",
+        "numero_romano": "II",
+        "descripcion": "Intuición, sabiduría oculta, misterio.",
+        "significado_upright": [
+            "Sabiduría",
+            "Intuición",
+            "Silencio"
+        ],
+        "significado_reversed": [
+            "Secretos",
+            "Bloqueo interior",
+            "Confusión"
+        ],
+        "elemento": "Agua",
+        "planeta": "Luna",
+        "imagen_url": ""
+    },
+    {
+        "id": 3,
+        "nombre": "La Emperatriz",
+        "nombre_ingles": "The Empress",
+        "numero_romano": "III",
+        "descripcion": "Fertilidad, abundancia, maternidad.",
+        "significado_upright": [
+            "Nutrición",
+            "Creatividad",
+            "Prosperidad"
+        ],
+        "significado_reversed": [
+            "Dependencia",
+            "Bloqueo creativo",
+            "Exceso"
+        ],
+        "elemento": "Tierra",
+        "planeta": "Venus",
+        "imagen_url": ""
+    },
+    {
+        "id": 4,
+        "nombre": "El Emperador",
+        "nombre_ingles": "The Emperor",
+        "numero_romano": "IV",
+        "descripcion": "Estabilidad, autoridad, control.",
+        "significado_upright": [
+            "Disciplina",
+            "Liderazgo",
+            "Protección"
+        ],
+        "significado_reversed": [
+            "Tiranía",
+            "Rigidez",
+            "Dominio"
+        ],
+        "elemento": "Fuego",
+        "planeta": "Aries",
+        "imagen_url": ""
+    },
+    {
+        "id": 5,
+        "nombre": "El Hierofante",
+        "nombre_ingles": "The Hierophant",
+        "numero_romano": "V",
+        "descripcion": "Tradición, espiritualidad, mentor.",
+        "significado_upright": [
+            "Guía espiritual",
+            "Conocimiento",
+            "Normas"
+        ],
+        "significado_reversed": [
+            "Dogmatismo",
+            "Rebelión",
+            "Restricción"
+        ],
+        "elemento": "Tierra",
+        "planeta": "Tauro",
+        "imagen_url": ""
+    },
+    {
+        "id": 6,
+        "nombre": "Los Enamorados",
+        "nombre_ingles": "The Lovers",
+        "numero_romano": "VI",
+        "descripcion": "Amor, unión, decisiones importantes.",
+        "significado_upright": [
+            "Conexión",
+            "Relación",
+            "Elección"
+        ],
+        "significado_reversed": [
+            "Desarmonía",
+            "Separación",
+            "Confusión"
+        ],
+        "elemento": "Aire",
+        "planeta": "Géminis",
+        "imagen_url": ""
+    },
+    {
+        "id": 7,
+        "nombre": "El Carro",
+        "nombre_ingles": "The Chariot",
+        "numero_romano": "VII",
+        "descripcion": "Victoria, determinación, dirección.",
+        "significado_upright": [
+            "Éxito",
+            "Control",
+            "Voluntad"
+        ],
+        "significado_reversed": [
+            "Pérdida de control",
+            "Frustración",
+            "Impulso"
+        ],
+        "elemento": "Agua",
+        "planeta": "Cáncer",
+        "imagen_url": ""
+    },
+    {
+        "id": 9,
+        "nombre": "El Ermitaño",
+        "nombre_ingles": "The Hermit",
+        "numero_romano": "IX",
+        "descripcion": "Introspección, búsqueda interior, soledad.",
+        "significado_upright": [
+            "Sabiduría",
+            "Reflexión",
+            "Guía interior"
+        ],
+        "significado_reversed": [
+            "Aislamiento",
+            "Soledad",
+            "Negación"
+        ],
+        "elemento": "Tierra",
+        "planeta": "Virgo",
+        "imagen_url": ""
+    },
+    {
+        "id": 10,
+        "nombre": "La Rueda de la Fortuna",
+        "nombre_ingles": "Wheel of Fortune",
+        "numero_romano": "X",
+        "descripcion": "Destino, cambio, ciclos.",
+        "significado_upright": [
+            "Cambio",
+            "Oportunidad",
+            "Suerte"
+        ],
+        "significado_reversed": [
+            "Descontrol",
+            "Resistencia al cambio",
+            "Mala racha"
+        ],
+        "elemento": "Fuego",
+        "planeta": "Júpiter",
+        "imagen_url": ""
+    },
+    {
+        "id": 11,
+        "nombre": "La Justicia",
+        "nombre_ingles": "Justice",
+        "numero_romano": "XI",
+        "descripcion": "Equilibrio, verdad, ley.",
+        "significado_upright": [
+            "Justicia",
+            "Claridad",
+            "Responsabilidad"
+        ],
+        "significado_reversed": [
+            "Injusticia",
+            "Deshonestidad",
+            "Corrupción"
+        ],
+        "elemento": "Aire",
+        "planeta": "Libra",
+        "imagen_url": ""
+    },
+    {
+        "id": 12,
+        "nombre": "El Colgado",
+        "nombre_ingles": "The Hanged Man",
+        "numero_romano": "XII",
+        "descripcion": "Rendición, nueva perspectiva, sacrificio.",
+        "significado_upright": [
+            "Paciencia",
+            "Renuncia",
+            "Perspectiva"
+        ],
+        "significado_reversed": [
+            "Estancamiento",
+            "Resistencia",
+            "Negación"
+        ],
+        "elemento": "Agua",
+        "planeta": "Neptuno",
+        "imagen_url": ""
+    },
+    {
+        "id": 13,
+        "nombre": "La Muerte",
+        "nombre_ingles": "Death",
+        "numero_romano": "XIII",
+        "descripcion": "Transformación, renacimiento, cambio.",
+        "significado_upright": [
+            "Fin de ciclo",
+            "Renovación",
+            "Liberación"
+        ],
+        "significado_reversed": [
+            "Resistencia al cambio",
+            "Estancamiento",
+            "Miedo"
+        ],
+        "elemento": "Agua",
+        "planeta": "Escorpio",
+        "imagen_url": ""
+    },
+    {
+        "id": 14,
+        "nombre": "La Templanza",
+        "nombre_ingles": "Temperance",
+        "numero_romano": "XIV",
+        "descripcion": "Equilibrio, moderación, armonía.",
+        "significado_upright": [
+            "Paz",
+            "Sanación",
+            "Adaptación"
+        ],
+        "significado_reversed": [
+            "Exceso",
+            "Desequilibrio",
+            "Conflictos"
+        ],
+        "elemento": "Fuego",
+        "planeta": "Sagitario",
+        "imagen_url": ""
+    },
+    {
+        "id": 15,
+        "nombre": "El Diablo",
+        "nombre_ingles": "The Devil",
+        "numero_romano": "XV",
+        "descripcion": "Apegos, materialismo, sombra.",
+        "significado_upright": [
+            "Adicción",
+            "Obsesión",
+            "Esclavitud"
+        ],
+        "significado_reversed": [
+            "Liberación",
+            "Desapego",
+            "Conciencia"
+        ],
+        "elemento": "Tierra",
+        "planeta": "Capricornio",
+        "imagen_url": ""
+    },
+    {
+        "id": 16,
+        "nombre": "La Torre",
+        "nombre_ingles": "The Tower",
+        "numero_romano": "XVI",
+        "descripcion": "Ruptura, crisis, revelación.",
+        "significado_upright": [
+            "Colapso",
+            "Verdad repentina",
+            "Transformación"
+        ],
+        "significado_reversed": [
+            "Evitar desastre",
+            "Resistencia",
+            "Temor al cambio"
+        ],
+        "elemento": "Fuego",
+        "planeta": "Marte",
+        "imagen_url": ""
+    },
+    {
+        "id": 17,
+        "nombre": "La Estrella",
+        "nombre_ingles": "The Star",
+        "numero_romano": "XVII",
+        "descripcion": "Esperanza, inspiración, guía espiritual.",
+        "significado_upright": [
+            "Renovación",
+            "Fe",
+            "Claridad"
+        ],
+        "significado_reversed": [
+            "Desilusión",
+            "Negatividad",
+            "Falta de dirección"
+        ],
+        "elemento": "Aire",
+        "planeta": "Acuario",
+        "imagen_url": ""
+    },
+    {
+        "id": 18,
+        "nombre": "La Luna",
+        "nombre_ingles": "The Moon",
+        "numero_romano": "XVIII",
+        "descripcion": "Ilusión, intuición, emociones ocultas.",
+        "significado_upright": [
+            "Sueños",
+            "Misterio",
+            "Subconsciente"
+        ],
+        "significado_reversed": [
+            "Confusión",
+            "Engaño",
+            "Ansiedad"
+        ],
+        "elemento": "Agua",
+        "planeta": "Piscis",
+        "imagen_url": ""
+    },
+    {
+        "id": 19,
+        "nombre": "El Sol",
+        "nombre_ingles": "The Sun",
+        "numero_romano": "XIX",
+        "descripcion": "Éxito, alegría, vitalidad.",
+        "significado_upright": [
+            "Felicidad",
+            "Éxito",
+            "Claridad"
+        ],
+        "significado_reversed": [
+            "Arrogancia",
+            "Tristeza oculta",
+            "Engaño"
+        ],
+        "elemento": "Fuego",
+        "planeta": "Sol",
+        "imagen_url": ""
+    },
+    {
+        "id": 20,
+        "nombre": "El Juicio",
+        "nombre_ingles": "Judgement",
+        "numero_romano": "XX",
+        "descripcion": "Renacimiento, decisiones, evaluación.",
+        "significado_upright": [
+            "Despertar",
+            "Juicio",
+            "Renovación"
+        ],
+        "significado_reversed": [
+            "Negación",
+            "Falta de conciencia",
+            "Crítica"
+        ],
+        "elemento": "Fuego",
+        "planeta": "Plutón",
+        "imagen_url": ""
+    },
+    {
+        "id": 21,
+        "nombre": "Diez de Oros",
+        "nombre_ingles": "",
+        "numero_romano": "1",
+        "descripcion": "",
+        "significado_upright": [
+            "Mucho dinero"
+        ],
+        "significado_reversed": [
+            "Poco dinero"
+        ],
+        "elemento": "",
+        "planeta": "",
+        "imagen_url": "",
+        "tipo": "menor"
+    }
+]

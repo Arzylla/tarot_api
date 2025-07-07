@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API de Tarot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>API de Tarot</h1>
+        </header>
+
+        <main>
+            <section class="arcanos-mayores">
+                <h2>Arcanos Mayores</h2>
+                <div class="crud-buttons d-flex justify-content-center gap-3">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#consultaModal">
+                        <i class="bi bi-search"></i> Consultar
+                    </button>
+                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#editarModal">
+                        <i class="bi bi-pencil"></i> Editar
+                    </button>
+                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#eliminarModal">
+                        <i class="bi bi-trash"></i> Eliminar
+                    </button>
+                    <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#crearModal">
+                        <i class="bi bi-plus"></i> Crear
+                    </button>
+                </div>
+            </section>
+
+            <section class="arcanos-menores">
+                <h2>Arcanos Menores</h2>
+                <div class="crud-buttons">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#crearModal">
+                        Crear Arcano Menor
+                    </button>
+                </div>
+            </section>
+
+            <section class="resultados" id="resultados">
+                <div id="cartas-container" class="cartas-grid">
+                    <!-- Las cartas se cargarán aquí -->
+                </div>
+                <div id="no-resultados" class="text-center d-none">
+                    <i class="bi bi-search"></i>
+                    <p>No se encontraron cartas que coincidan con tu búsqueda</p>
+                </div>
+            </section>
+
+            <!-- Modal para consulta -->
+            <div class="modal fade" id="consultaModal" tabindex="-1">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Consultar Carta</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form id="consultaForm">
+                                <div class="mb-3">
+                                    <label for="tipoCarta" class="form-label">Tipo de Carta</label>
+                                    <select class="form-select" id="tipoCarta" required>
+                                        <option value="mayor">Arcanos Mayores</option>
+                                        <option value="menor">Arcanos Menores</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="idCarta" class="form-label">ID de la Carta</label>
+                                    <input type="number" class="form-control" id="idCarta" required>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-primary" onclick="consultarCarta()">Consultar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal para editar -->
+            <div class="modal fade" id="editarModal" tabindex="-1">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Editar Arcano Mayor</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form id="editarForm">
+                                <div class="mb-3">
+                                    <label for="editarId" class="form-label">ID</label>
+                                    <input type="number" class="form-control" id="editarId" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="editarNombre" class="form-label">Nombre</label>
+                                    <input type="text" class="form-control" id="editarNombre" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="editarSignificadoDerecho" class="form-label">Significado Derecho</label>
+                                    <textarea class="form-control" id="editarSignificadoDerecho" required></textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="editarSignificadoInvertido" class="form-label">Significado Invertido</label>
+                                    <textarea class="form-control" id="editarSignificadoInvertido" required></textarea>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-primary" onclick="guardarEdicion()">Guardar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal para eliminar -->
+            <div class="modal fade" id="eliminarModal" tabindex="-1">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Eliminar Arcano Mayor</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form id="eliminarForm">
+                                <div class="mb-3">
+                                    <label for="eliminarId" class="form-label">ID del Arcano Mayor</label>
+                                    <input type="number" class="form-control" id="eliminarId" required>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-danger" onclick="confirmarEliminacion()">Eliminar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal para crear -->
+            <div class="modal fade" id="crearModal" tabindex="-1">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Crear Arcano Menor</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form id="crearForm">
+                                <div class="mb-3">
+                                    <label for="crearNombre" class="form-label">Nombre de la Carta</label>
+                                    <input type="text" class="form-control" id="crearNombre" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="crearSignificadoDerecho" class="form-label">Significado Derecho</label>
+                                    <textarea class="form-control" id="crearSignificadoDerecho" rows="3" required></textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="crearSignificadoInvertido" class="form-label">Significado Invertido</label>
+                                    <textarea class="form-control" id="crearSignificadoInvertido" rows="3" required></textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="crearImagen" class="form-label">Imagen de la Carta</label>
+                                    <input type="file" class="form-control" id="crearImagen" accept="image/*">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-primary" onclick="crearArcoMenor()">Crear</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <section class="cartas">
+                <h2>Ver Todas las Cartas</h2>
+                <div id="cartas-container" class="cartas-grid">
+                    <!-- Las cartas se cargarán aquí -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
